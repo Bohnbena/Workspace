@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="Register.css" />
+    <script src="Register.js" defer></script>
+  </head>
+  <body>
+    <div id="RegisterHeader">
+      <h1>Register</h1>
+    </div>
+
+    <div id="RegisterDaten">
+      <div><p>Username</p></div>
+      <input type="text" name="" id="InputUsername"/>
+      <div><p>Password</p></div>
+      <input type="text" name="" id="InputPassword" tabindex="1" onchange="passwordReqColor();" onkeypress="this.onchange();" oninput="this.onchange();"/>
+      
+      <div>
+        <p class="PasswordInfos" id="PassInfo1">needs to be longer than 3 characters</p>
+        <p class="PasswordInfos" id="PassInfo2">needs to include one numer</p>
+        <p class="PasswordInfos" id="PassInfo3">needs to include one large character</p>
+      </div>
+      
+      <div><p>Confirm Password</p></div>
+      <input type="text" name="" id="InputPasswordAgain" />
+
+      
+      <p id="warnung"></p>
+        
+
+      <div id="btnRegister" onclick="LeererInput()">Register</div>
+
+      
+    </div>
+  </body>
+</html>

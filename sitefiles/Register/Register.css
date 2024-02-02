@@ -1,0 +1,68 @@
+#RegisterHeader {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  font-size: 30px;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: rgb(252, 252, 252);
+}
+
+#RegisterDaten {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#btnRegister {
+  border: 1px solid black;
+  border-radius: 200px;
+  background-color: black;
+  padding: 5px;
+  font-size: 20px;
+  margin-top: 17px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer; /*Ändert den mauszeiger auf Pointer (Also dieser Finger da)*/
+  user-select: none; /*Verhindert das merkieren des Textes innerhalb der DIV*/
+  transition: background-color linear 0.5s; /* wenn man die Maus vom Button entfernt, smoothen übergang in seine alte farbe*/
+}
+
+#btnRegister:hover {
+  background-color: white;
+  color: black;
+  transition: all 0.5s ease-in-out;
+}
+
+#savebtn {
+  padding: 5px;
+  font-size: 20px;
+  border: solid black 3px;
+  border-radius: 200px;
+  background-color: black;
+  color: white;
+  -webkit-transition: padding 2s;
+  text-decoration: none;
+}
+
+.PasswordInfos {
+  color: red;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 15px;
+  transition: opacity 0.5s linear, visibility 0.5s linear;
+  max-height: 0;
+}
+
+#InputPassword:focus + div .PasswordInfos {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
