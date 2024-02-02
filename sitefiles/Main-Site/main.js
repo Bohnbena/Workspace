@@ -12,6 +12,8 @@ function savelogin() {
       element.style.backgroundColor = "#ff434f";
     });
   } else {
+    //hier Acc und Pw überprüfung 
+
     window.location.href = "/mainmenu.html";
   }
 }
