@@ -109,3 +109,5 @@ function containsUpperLower(password) {
     // Das Passwort ist stark, wenn alle Bedingungen erfüllt sind
     return hasUpperCase && hasLowerCase;
   }
+
+  //GitTest
