@@ -10,11 +10,14 @@ function LeererInput() {
     InputPasswordAgain.value
   ); //Check inputs if empty color red , gebe mit values
 
-  Requirementsforinput(
+  if (Requirementsforinput(
     InputUsername.value,
     InputPassword.value,
     InputPasswordAgain.value
-  );
+  )){
+    window.location.href = "/mainmenu.html";
+  };
+
 }
 
 function changeBackgroundColor(element, color) {
@@ -56,10 +59,13 @@ function Requirementsforinput(
   if (UsernameValue.length < 3 && UsernameValue.length != '')
   {
     warnung.innerText = "Username to short"
-  }
-  
-  if (PasswordValue.includes(UsernameValue) && UsernameValue != '') {
-    warnung.innerHTML = "Das Password darf nicht dem Username entsprechen"
+  } else if (PasswordValue.includes(UsernameValue) && UsernameValue != '') {
+    warnung.innerHTML = "Das Password darf nicht dem Username entsprechen" // mach englisch hier
+  } else if (PasswordAgainValue !== PasswordValue){
+    warnung.innerHTML = "Die Passwörter stimmen nicht überein!" // hier englisch auch 
+  } else {
+    warnung.innerHTML = " "; // "Alt + 255"
+    return true;
   }
 
 }
