@@ -10,12 +10,13 @@
     <div id="RegisterHeader">
       <h1>Register</h1>
     </div>
-
-    <div id="RegisterDaten">
+    
+    <form action="/register" method="POST">      <!-- Schicke die daten an denn server um zu verarbeiten mit /register  -->
+    <div id="RegisterDaten" >
       <div><p>Username</p></div>
-      <input type="text" name="" id="InputUsername"/>
+      <input type="text" name="RegisterName" id="InputUsername"/>
       <div><p>Password</p></div>
-      <input type="text" name="" id="InputPassword" tabindex="1" onchange="passwordReqColor();" onkeypress="this.onchange();" oninput="this.onchange();"/>
+      <input type="text" name="RegisterPassword" id="InputPassword" tabindex="1" onchange="passwordReqColor();" onkeypress="this.onchange();" oninput="this.onchange();"/>
       
       <div>
         <p class="PasswordInfos" id="PassInfo1">needs to be longer than 3 characters</p>
@@ -25,15 +26,13 @@
       
       <div><p>Confirm Password</p></div>
       <input type="text" name="" id="InputPasswordAgain" />
-
       
       <p id="warnung"> </p> 
       <!-- alt + 255 -->
         
-
-      <div id="btnRegister" onclick="LeererInput()">Register</div>
-
+      <button type="submit" id="btnRegister" onclick="LeererInput()">Register</button>  <!-- mit submit schickt er das endgültich ab  -->
       
     </div>
+    </form>
   </body>
 </html>

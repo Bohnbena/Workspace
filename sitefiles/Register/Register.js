@@ -15,7 +15,7 @@ function LeererInput() {
     InputPassword.value,
     InputPasswordAgain.value
   )){
-    window.location.href = "/mainmenu.html";
+    //window.location.href = "/mainmenu.html";
   };
 
 }
