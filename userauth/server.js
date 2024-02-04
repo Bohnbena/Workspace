@@ -16,7 +16,6 @@ app.post("/register" , async (req,res) => {
             id: Date.now().toString(), // 12312312312 
             name: req.body.RegisterName,
             password: hashedPassword,
-            
         })
 
         console.log(users);
